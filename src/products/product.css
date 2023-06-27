@@ -1,0 +1,30 @@
+.product-img-holder{
+    width: 80% ;
+    height: 100% ;
+    display: block ;  
+}
+.product-img-holder img {
+    width: 100% ;
+    height: 100% ;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px ;
+}
+.product-card{
+    border-radius: 10px; 
+    width: 100% ;
+}
+@media screen and (max-width : 1452px ) {
+    .product-card{
+        width: 85% ;
+    }
+}
+@media screen and (max-width : 635px) {
+    .product-img-holder{
+        width: 100% ;
+        height: 350px ;
+    }
+    .product-card{
+        width: 100% ;
+    }
+}

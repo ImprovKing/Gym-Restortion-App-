@@ -1,0 +1,34 @@
+footer{
+    height: auto ;
+    display: block ;
+    width: 100vw ;
+    min-width: 250px ;
+    background : #1b2735 ;
+    padding : 15px ;
+}
+#inner-block {
+    width: 30px;
+    height: 30px;
+    width: 100% ;
+    height: 100% ;
+    object-fit: contain;
+    object-position: center;
+}
+.img-container{
+    height: 120px ;
+    display: block ;
+    margin : 10px auto 0 auto ;
+}
+.img-container img {
+    width: 100% ;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top ;
+}
+
+@media screen and (max-width : 315px ) {
+    .img-container{
+        height: 50px ;
+        margin : 5px auto 5px auto ;
+    }
+}

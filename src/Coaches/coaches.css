@@ -1,0 +1,38 @@
+.img-holder{
+    border : 1px solid #000 ;
+    height : 450px ;
+    width: 70% ;
+}
+#img-holder img {
+    width: 100% ;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px ;
+}
+
+
+
+@media screen and (max-width : 1024px) {
+    #img-holder{
+        margin-bottom: 10% ;
+        border-radius: 2% ;
+        height: 500px ;
+        background-position: center top;
+        width: 80% ;
+        margin : 0 auto 0 auto ;
+    }
+}
+@media screen and (max-width : 500px) {
+    #img-holder{
+        width: 90% ;
+        height: 480px ;
+    }
+}
+@media screen and (max-width : 320px ) {
+    #img-holder{
+        height: 430px ;
+        width: 90% ;
+        box-shadow: 3px 3px 3px #141414  , -3px -3px 3px #141414 ;
+    }
+}

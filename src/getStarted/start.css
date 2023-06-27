@@ -1,0 +1,29 @@
+#price-card{
+    height: auto ;
+    width: 300px ;
+    border-radius: 10px ;
+    background : #fff ;    
+    box-shadow: 2px 2px 3px #141414 , -2px -2px 3px #141414 ;
+}
+#price-card:hover {
+    transform: scale(1.01 ,1.01 );
+}
+#price-btn{
+    width: 100%;
+    padding : 10px 15px ;
+    margin : 0 auto 0 auto ;
+    }
+#price-cont{
+    width: 95% ;
+    margin : 0 auto 0 auto ;
+}
+#pay-btn{
+    width: 100%;
+}    
+@media screen and (max-width : 999px) {
+    #price-card{
+        display: block ;
+        width: 70% ;
+        margin : 0 auto 0 auto ;
+    }
+}

@@ -1,0 +1,283 @@
+.App {
+  display: flexbox ;  
+  background: radial-gradient(ellipse at bottom, #1b2735 1%, #090a0f 100%) ;
+  font-size: calc(10px + 2vmin);
+  position: relative;
+  margin : 0 auto 0 auto ;
+  width: 100% ;
+  overflow-x: hidden ;
+  color: white;
+}
+
+/* error Page absolute styling */
+#error{
+  height: 100vh;
+}  
+
+/* HEADSHOT */
+.headshot , #headshotImg-cont{
+  width: 100% ;
+  display: block ;
+  height : 600px ;
+}
+#headshotImg-cont img {
+  width: 100% ;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+#nav{
+  position: absolute;
+  top :0px ;
+  right: 10px ;
+  width: 100% ;
+}
+.header-text{
+  position: absolute ; 
+  right:  20px ;
+  top : 400px ;
+}
+.header-text button{
+  margin-left: 100px ;
+  margin-top: 20px ;
+}
+.head{
+  margin-top : 30px ;
+  margin-left: 20px ;
+  margin-bottom: 30px ;
+  width: auto ; 
+  display: inline-block ;
+}
+
+/* secion */
+
+section{
+  padding : 20px ;
+  display: block ;
+  max-width: 1440px ;
+  min-width: 320px ;
+}
+
+/* PROGRAMS SECTION */
+.info-text{
+  display : block ;
+  margin :20px ;
+  width: 30%; 
+}
+.prog-img-holder{
+  width: 50px ;
+  height:  50px ;
+  display: block ;
+  margin : 5px ;
+}
+.prog-img-holder img{
+  width : 1005 ;
+  height: 100% ;
+  object-fit: contain;
+  object-position: center ;
+}
+.content-img-holder{
+  width:  45% ;
+  height : 550px ;
+  margin : 10px; 
+  background-image: url('https://simpleslim.ru/wp-content/uploads/2019/10/group-of-people-training-in-gym-ku93bg2.jpg'); 
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover ;
+  border-radius : 10px ;
+  box-shadow: 5px 5px 5px #141414 , -5px -5px 5px #141414 ;
+}
+
+/* INVITE */
+
+.invite{
+  width : 100% ;
+  display : block ; 
+  height: calc(450px + 2vmin) ;
+  background-image: url('https://i.ytimg.com/vi/Q43-XY3o38w/maxresdefault.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+}
+
+/*BLOG */
+.blog h5{
+  display: block;
+  width: 50% ;
+  margin : 20px auto 20px auto ;  
+}
+#blog-info{
+  width: 80% ;
+}
+#blog-cards{
+  height: 450px ;
+}
+.blog-card1{
+  background-image: url('https://th.bing.com/th/id/R.11d387e9d7c3c3ad782d8cc3de1e7138?rik=hdVNQ5%2bCq5nEmg&pid=ImgRaw&r=0');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.blog-card2{
+  background-image: url('https://www.omnilit.com/wp-content/uploads/2018/05/rwverveqrvceqr.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.blog-card3{
+  background-image: url('https://th.bing.com/th/id/R.6934fa57593dea743316c3df9efdcf78?rik=Devuy0w3pqkqpA&pid=ImgRaw&r=0');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.blog-btn{
+  display: block;
+  margin : 10px auto 10px auto ;
+
+} 
+
+
+/* COACH */
+
+.coach{
+  height: auto ;
+  display: block;
+}
+.coach-height{
+  height : 650px ;
+  display: block ;
+  margin : 10px ;
+}
+/* TESTIMONIALS */
+
+.card{
+  height: auto ;
+  width: 65% ;
+  margin: 0 auto 0 auto;
+
+}
+.card-image{
+  margin : 10px ;
+  width: 80px ;
+  height: 80px ;
+  margin : 0 auto 0 auto ;
+  display: block ; 
+}
+.test-cont{
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover ;
+}
+.card-image img{
+  width: 100% ;
+  height: 100% ;
+  margin-top: 10px;
+  object-fit: contain ;
+  object-position: center ;
+  border-radius: 50% ;
+  box-shadow: 3px 3px 3px #141414 , -3px -3px 3px #141414;
+}
+
+/* CONTACT MAP */
+
+#cont-map{
+  width: 50% ;
+  height: 400px ;
+  display: block ;
+  margin : 0 auto 0 auto ;
+}
+
+@media screen and (max-width : 1024px) {
+  .coach-height{
+    height: 450px ;
+  }
+  .card-image{
+    width: 60px ;
+    height:60px ;
+  }
+  .cont-map{
+    width: 90% ;
+    margin-left: 75px ;
+  }
+  section{
+    padding : 10px ;
+  }
+  #blog-cards{
+    height: 480px;
+  }
+  #cont-map{
+    width: 70% ;
+    height : 300px ;
+  }
+  #test-card{
+    width: 100% ;
+  }
+}
+
+@media screen and (max-width : 839px) {
+  #blog-cards{
+    margin : 10px auto 10px auto ;
+    display: block;
+  }
+}
+
+@media screen and (max-width : 763px) {
+  .content-img-holder{
+    width: 100% ;
+    margin : 0 ;
+  }
+  .info-text{
+    width: 50%;
+  }
+}
+@media screen and (max-width : 700px) {
+  .content-img-holder{
+    width: 100% ;
+    margin : 0 ;
+  }
+  #blog-cards{
+    width: 100% ;
+    margin: 15px auto 15px auto ;
+    display: block ;
+  }
+  .info-text{
+    width: 80%;
+  }
+  .content-img-holderP{
+    height: 150px ;
+  }
+}
+@media screen and (max-width : 320px) {
+  #blog-cards{
+    height: 280px ;
+    margin: 5px auto 5px auto ;
+  }
+  #blog-info-text{
+    display: none;
+    visibility: hidden ;
+  }
+  #content-img-holder{
+    height: 280px ;
+    width: 90% ;
+    margin : 0 auto 0 auto ;
+  }
+  .invite{
+    width: 80% ;
+    display: block;
+    margin : 0 auto 0 auto ;
+    height: 350px ;
+  }
+  #blog-cont-box{
+    margin-left: -5px ;
+  }
+  .coach{
+    height: 400px ;
+  }
+}
+@media screen and (max-width : 250px) {
+  .App{
+    max-width: 250px;
+  }
+}
