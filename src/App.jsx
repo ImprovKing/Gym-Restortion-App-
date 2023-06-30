@@ -91,6 +91,8 @@ const headshotResp = {
 };
 
 
+const App = () =>{
+
 
   //useEffect
   useEffect(() => {
