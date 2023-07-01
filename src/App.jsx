@@ -9,7 +9,7 @@ import biceps from './biceps.svg';
 import { Carousel } from '3d-react-carousal';
 import RCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { getArticles } from './_DATAS/articles' ;
