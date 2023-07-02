@@ -6,7 +6,6 @@ import cardio from './cardio.svg';
 import Weight from './weight.svg';
 import yoga from './yoga.svg';
 import biceps from './biceps.svg';
-import { Carousel } from '3d-react-carousal';
 import RCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from 'react-router-dom';
@@ -14,18 +13,27 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { getArticles } from './_DATAS/articles' ;
 import { Loader } from '@googlemaps/js-api-loader';
+import Carousel from 'react-spring-3d-carousel';
+import uuidv4 from "uuid";
 
 
 
-let slides = [
-  <img src="https://www.womenfitness.net/wp/wp-content/uploads/2017/03/Svava-Sigbertsdottir.jpeg" alt="2" />,
-  <img src="https://th.bing.com/th/id/R.bc5e80929bebfc8ff69ce1d493f63666?rik=RyGMV0k6bNhQbA&pid=ImgRaw&r=0" alt="3" />,
-  <img src="https://th.bing.com/th/id/R.ea59793a7b82f598fd0469a56a176f37?rik=q20Uw8OJdiIArw&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f1302%2f0275%2fproducts%2fSimeon_Panda_Focus_Poster_2_1200x630.jpg%3fv%3d1463745955&ehk=QQTJqlt3YgrxYSuA7%2fadXxMtjXHeug%2fdR8nqRQc%2bBPs%3d&risl=&pid=ImgRaw&r=0" alt="4" />,
-];
 
-const callback = function (index) {
-  return index ;
-}
+
+const slides = [
+  {
+    key: uuidv4(),
+    content: <img src="https://www.womenfitness.net/wp/wp-content/uploads/2017/03/Svava-Sigbertsdottir.jpeg" alt="1" />
+  },
+  {
+    key: uuidv4(),
+    content: <img src="https://th.bing.com/th/id/R.bc5e80929bebfc8ff69ce1d493f63666?rik=RyGMV0k6bNhQbA&pid=ImgRaw&r=0" alt="7" />
+  },
+  {
+    key: uuidv4(),
+    content: <img src="https://th.bing.com/th/id/R.ea59793a7b82f598fd0469a56a176f37?rik=q20Uw8OJdiIArw&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f1302%2f0275%2fproducts%2fSimeon_Panda_Focus_Poster_2_1200x630.jpg%3fv%3d1463745955&ehk=QQTJqlt3YgrxYSuA7%2fadXxMtjXHeug%2fdR8nqRQc%2bBPs%3d&risl=&pid=ImgRaw&r=0" alt="8" />
+  }
+] ; 
 
 const loader = new Loader({
   apiKey: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
@@ -92,7 +100,6 @@ const headshotResp = {
 
 
 const App = () =>{
-
 
   //useEffect
   useEffect(() => {
@@ -270,7 +277,7 @@ const App = () =>{
         <p className='text-center  font-extralight ti:text-xs'> Meet our team of seasoned trainers and instructors who will ensure you get the best support for your body goals.</p>
         <br /><br />
         <div className='coach-height'>
-          <Carousel slides={slides} autoplay={true} interval={3000} onSlideChange={callback} />
+        <Carousel slides={slides} goToSlide={200}/>
           <br /><br />
           <div className='text-center  mt-10'>
             <button className='text-center text-white rounded hover:bg-blue-700 bg-blue-600 px-2 py-4 md:text-sm px-1 py-2'> Check Our Coaches Out</button>

@@ -25,22 +25,22 @@ function NavBar() {
 
                 <div id="sidebarMenu" >
                     <ul className="sidebarMenuInner">
-                        <li className='font-extralight hover:text-red-500'>
+                        <li className='no-underline text-white font-extralight hover:text-red-500'>
                             <Link to={'/'}>
                                 Home
                             </Link>
                         </li>
-                        <li className='font-extralight hover:text-red-500'>
+                        <li className='no-underline text-white font-extralight hover:text-red-500'>
                             <Link to={'/Coaches'}>
                                 Coaches
                             </Link>
                         </li>
-                        <li className='font-extralight hover:text-red-500'>
+                        <li className='no-underline text-white font-extralight hover:text-red-500'>
                             <Link to={'/Products'}>
                                 Products
                             </Link>
                         </li>
-                        <li className='font-extralight hover:text-red-500'>
+                        <li className='no-underline text-white font-extralight hover:text-red-500'>
                             <Link to={'/Blog'}>
                                 Blog
                             </Link>
