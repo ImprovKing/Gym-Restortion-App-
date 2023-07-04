@@ -1,5 +1,5 @@
 import React , {useEffect  } from 'react';
-import { Link , NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Footer from '../components/fooetr/footer';
 import NavBar from '../components/navbar/navbar';
 import './product.css' ;

@@ -5,7 +5,6 @@ import './coaches.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { getAllCoaches } from '../_DATAS/coach';
-import { NavLink } from 'react-router-dom';
 
 function Coaches() {
 

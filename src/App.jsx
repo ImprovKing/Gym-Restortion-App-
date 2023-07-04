@@ -11,8 +11,6 @@ import "react-multi-carousel/lib/styles.css";
 import { Link } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { getArticles } from './_DATAS/articles' ;
-import { Loader } from '@googlemaps/js-api-loader';
 import Carousel from 'react-spring-3d-carousel';
 import uuidv4 from "uuid";
 
@@ -35,29 +33,6 @@ const slides = [
   }
 ] ; 
 
-const loader = new Loader({
-  apiKey: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
-  version: "weekly",
-  libraries: ["places"]
-});
-
-const mapOptions = {
-  center: {
-    lat: 12,
-    lng: 6
-  },
-  zoom: 4
-};
-
-// Promise
-loader
-  .load()
-  .then((google) => {
-    new google.maps.Map(document.getElementById("cont-map"), mapOptions);
-  })
-  .catch(err => { const mute = err });
-
-  
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -106,10 +81,6 @@ const App = () =>{
     AOS.init();
     AOS.refresh();
   }, []);
-
-  let articles = getArticles() ;
-
-
 
   return (
     <div className="App">
@@ -225,7 +196,7 @@ const App = () =>{
               <div className=" shadow-md rounded-lg max-w-md mb-5 mt-10 blog-card1 bm:mx-auto my-auto " id='blog-cards' data-aos="zoom-in">
                 
                 <div className="p-2 ">
-                  <a href="#">
+                  <a >
                     <h5 className="text-red-300 font-bold tracking-tight mb-2">How much of your body is involved in your typical workout routine? If you’re like most average gym-goers</h5>
                   </a>
                   <p className="font-normal text-gray-700 mb-3 " id='blog-info-text'>Creatine closely follows whey protein in the list of most popular sports nutrition products. It’s convenient, it’s backed up byresearch and it’s a valuable part of nutrition .</p>
@@ -239,7 +210,7 @@ const App = () =>{
               <div className=" shadow-md rounded-lg max-w-md mb-5 mt-10 blog-card2 bm:mx-auto my-auto " id='blog-cards' data-aos="zoom-in">
                 
                 <div className="p-2 ">
-                  <a href="#">
+                  <a >
                     <h5 className="text-red-300 font-bold tracking-tight mb-2">Creatine Supplements 101: Benefits, Side Effects And More</h5>
                   </a>
                   <p className="font-normal text-gray-700 mb-3 " id='blog-info-text'>How much of your body is involved in your typical workout routine.</p>
@@ -253,7 +224,7 @@ const App = () =>{
               <div className=" shadow-md rounded-lg max-w-md mb-5 mt-10 blog-card3 bm:mx-auto my-auto " id='blog-cards' data-aos="zoom-in">
                 
                 <div className="p-2 ">
-                  <a href="#">
+                  <a >
                     <h5 className="text-red-300 font-bold tracking-tight mb-2">Yoga as a potential therapy for cardiovascular disease</h5>
                   </a>
                   <p className="font-normal text-gray-700 mb-3 " id='blog-info-text'>It’s important to give your entire body a workout, one way or another</p>
@@ -334,11 +305,6 @@ const App = () =>{
           <div className='p-10 text-center'>{/* infos */}
             <h2 className='font-bold text-3xl m-10 md:text-lg '>GET IN TOUCH </h2><br />
             <h5 className=''> +234 817 269 9901 <br /><br />  etfit@skyfitnessng.com </h5>
-          </div>
-
-
-          <div className='cont-map ' id='cont-map'>
-            {/* google api for map of upstate new york location */}
           </div>
 
         </div>
